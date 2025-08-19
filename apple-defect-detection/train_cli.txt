@@ -1,0 +1,3 @@
+yolo train model=yolov8n-cls.pt data=dataset epochs=25 batch=16 --cache
+yolo val model=runs\classify\train\weights\best.pt data=dataset
+yolo task=classify mode=predict model=runs\classify\train\weights\best.pt source=dataset\val\AUTO
